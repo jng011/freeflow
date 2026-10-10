@@ -1,10 +1,10 @@
 #!/bin/bash
-# Publish the notarized build to GitHub (repo jng011/free-flow) with a Sparkle appcast.
+# Publish the notarized build to GitHub (repo jng011/freeflow) with a Sparkle appcast.
 # Run after `PARLE_TIMESTAMP=1 PARLE_BUILD=<n> scripts/ship-freeflow.sh` installed it.
 #   scripts/publish-freeflow.sh "<release notes>"
 set -euo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-GH_REPO="${FREEFLOW_GH_REPO:-jng011/free-flow}"
+GH_REPO="${FREEFLOW_GH_REPO:-jng011/freeflow}"
 APP="$HOME/Applications/Free Flow.app"
 NOTES="${1:?release notes}"
 VERSION=$(defaults read "$APP/Contents/Info.plist" CFBundleShortVersionString)
@@ -36,6 +36,7 @@ cat > "$DIST/appcast.xml" <<XML
   </channel>
 </rss>
 XML
+cd "${FREEFLOW_PUBLIC_DIR:-$REPO/../freeflow-public}"  # gh needs a checkout of the public repo
 gh release create "$TAG" "$ZIP" "$DMG" "$DIST/appcast.xml" \
   --repo "$GH_REPO" --target main --title "Free Flow $VERSION" --notes "$NOTES" --latest
 echo "Published Free Flow $VERSION ($BUILD) -> https://github.com/$GH_REPO/releases/tag/$TAG"
