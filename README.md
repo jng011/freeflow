@@ -80,6 +80,26 @@ In Xcode, choose your own team under **Signing & Capabilities**, then press **Ru
 
 To build a signed Release copy from the command line instead, see [BUILDING.md](BUILDING.md).
 
+## Acknowledgments
+
+Free Flow stands on these open-source projects:
+
+**Speech**
+- [whisper.cpp](https://github.com/ggml-org/whisper.cpp): fast on-device Whisper, with the Silero voice activity model
+- [FluidAudio](https://github.com/FluidInference/FluidAudio): Parakeet transcription and the speaker embeddings behind "Only your voice"
+
+**App**
+- [Sparkle](https://github.com/sparkle-project/Sparkle): automatic updates
+- [MarkdownUI](https://github.com/gonzalezreal/swift-markdown-ui): rendering formatted text
+- [SelectedTextKit](https://github.com/tisfeng/SelectedTextKit), with [AXSwift](https://github.com/tisfeng/AXSwift) and [KeySender](https://github.com/jordanbaird/KeySender): reading the text around your cursor
+- MediaRemoteAdapter: pausing music while you dictate, bundled in `Packages/`
+- [Zip](https://github.com/marmelroy/Zip): import and export
+- [Swift Atomics](https://github.com/apple/swift-atomics): low-level thread safety
+- LLMkit: the AI provider client, bundled in `Packages/`
+
+**Fonts**
+- [Figtree](https://github.com/erikdkennedy/figtree) and [EB Garamond](https://github.com/octaviopardo/EBGaramond12), under the SIL Open Font License
+
 ## License
 
 Free Flow is released under the [GNU General Public License v3.0](LICENSE).
