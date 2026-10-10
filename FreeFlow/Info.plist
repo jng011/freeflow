@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>wav</string>
+				<string>mp3</string>
+				<string>m4a</string>
+				<string>aiff</string>
+				<string>mp4</string>
+				<string>mov</string>
+				<string>aac</string>
+				<string>flac</string>
+				<string>caf</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Audio/Video File</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.audio</string>
+				<string>public.movie</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSUIElement</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>ts.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Flow reads the current browser tab address so it can format text for that site.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Flow uses your microphone only while you dictate.</string>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Flow can read on-screen text to spell names correctly.</string>
+	<key>SUEnableAutomaticChecks</key>
+	<false/>
+	<key>SUFeedURL</key>
+	<string>https://github.com/jng011/freeflow/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>Q58fybgJvfCGZx/YPkiRtZaN5Hg95AfMGq5mC2QYCtQ=</string>
+</dict>
+</plist>
