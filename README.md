@@ -7,15 +7,14 @@
 
 **Voice to text for your Mac.** Hold **fn**, talk, let go, and clean text appears wherever you're typing.
 
-[![Latest release](https://img.shields.io/github/v/release/jng011/freeflow?style=flat-square)](https://github.com/jng011/freeflow/releases/latest)
-![macOS 26+](https://img.shields.io/badge/macOS-26%2B-000000?style=flat-square&logo=apple&logoColor=white)
-![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-only-555555?style=flat-square)
-![Swift](https://img.shields.io/badge/Swift-SwiftUI-F05138?style=flat-square&logo=swift&logoColor=white)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-2ea44f?style=flat-square)](LICENSE)
+<a href="https://github.com/jng011/freeflow/releases/latest">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/images/download-dark.svg">
+    <img src="./docs/images/download-light.svg" alt="Download Free Flow for Mac" height="56">
+  </picture>
+</a>
 
-<br>
-
-[![Download Free Flow for macOS](https://img.shields.io/badge/Download%20for%20macOS-Free%20Flow-0A84FF?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/jng011/freeflow/releases/latest)
+macOS 26+ &nbsp;·&nbsp; Apple Silicon &nbsp;·&nbsp; Free and open source
 
 [Why](#why-free-flow) • [Features](#features) • [How it works](#how-it-works) • [Install](#installation) • [Shortcuts](#shortcuts) • [AI agents](#let-ai-agents-see-your-dictations) • [Build from source](#build-from-source)
 
@@ -51,14 +50,12 @@ Free Flow turns your voice into polished text in any app. Speech is transcribed 
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A["Hold fn"] --> B["Speak"]
-    B --> C["Release fn"]
-    C --> D["On-device transcription<br/>Whisper · Parakeet · Apple Speech"]
-    D --> E["Dictionary + AI cleanup<br/>(optional)"]
-    E --> F["Clean text pasted<br/>where you're typing"]
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/images/how-it-works-dark.svg">
+    <img src="./docs/images/how-it-works-light.svg" alt="Hold fn, talk, let go: clean text appears at your cursor" width="900">
+  </picture>
+</p>
 
 1. **Hold fn** in any app and start talking. The Flow Bar shows that Free Flow is listening.
 2. **Let go.** Your audio is transcribed on your Mac.

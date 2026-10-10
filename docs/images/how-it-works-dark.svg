@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230">
+  <g transform="translate(20 30)">
+    <rect width="260" height="170" rx="20" fill="#202020" stroke="#333331"/>
+    <g transform="translate(0 0)"><rect x="24" y="24" width="64" height="64" rx="14" fill="#2A2A29" stroke="#333331"/>
+      <rect x="24" y="84" width="64" height="6" rx="3" fill="#333331"/>
+      <text x="56" y="64" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#E9E8E1">fn</text>
+      <circle cx="108" cy="56" r="5" fill="#C59BE0"/></g>
+    <text x="24" y="128" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="650" fill="#E9E8E1">1  Hold fn</text>
+    <text x="24" y="151" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#9B9A94">In any app, anywhere you type.</text>
+  </g>
+  <path d="M287 75.0 l10 0" stroke="none"/><g fill="none" stroke="#9B9A94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M287 90h20"/><path d="M301 84l6 6-6 6"/></g>
+  <g transform="translate(320 30)">
+    <rect width="260" height="170" rx="20" fill="#202020" stroke="#333331"/>
+    <g transform="translate(0 0)"><rect x="24" y="30" width="212" height="56" rx="28" fill="#FFFFEB"/><rect x="62" y="49.0" width="6" height="18" rx="3" fill="#1A1A1A"/><rect x="78" y="41.0" width="6" height="34" rx="3" fill="#1A1A1A"/><rect x="94" y="34.0" width="6" height="48" rx="3" fill="#1A1A1A"/><rect x="110" y="44.0" width="6" height="28" rx="3" fill="#1A1A1A"/><rect x="126" y="38.0" width="6" height="40" rx="3" fill="#1A1A1A"/><rect x="142" y="47.0" width="6" height="22" rx="3" fill="#1A1A1A"/><rect x="158" y="36.0" width="6" height="44" rx="3" fill="#1A1A1A"/><rect x="174" y="43.0" width="6" height="30" rx="3" fill="#1A1A1A"/><rect x="190" y="50.0" width="6" height="16" rx="3" fill="#1A1A1A"/></g>
+    <text x="24" y="128" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="650" fill="#E9E8E1">2  Talk</text>
+    <text x="24" y="151" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#9B9A94">Transcribed on your Mac.</text>
+  </g>
+  <path d="M587 75.0 l10 0" stroke="none"/><g fill="none" stroke="#9B9A94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M587 90h20"/><path d="M601 84l6 6-6 6"/></g>
+  <g transform="translate(620 30)">
+    <rect width="260" height="170" rx="20" fill="#202020" stroke="#333331"/>
+    <g transform="translate(0 0)"><rect x="24" y="30" width="212" height="56" rx="12" fill="#2A2A29" stroke="#333331"/>
+      <text x="40" y="64" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#E9E8E1">See you at 3pm!</text>
+      <rect x="226" y="46" width="2" height="24" fill="#C59BE0"/></g>
+    <text x="24" y="128" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="650" fill="#E9E8E1">3  Let go</text>
+    <text x="24" y="151" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#9B9A94">Clean text appears at your cursor.</text>
+  </g>
+</svg>
