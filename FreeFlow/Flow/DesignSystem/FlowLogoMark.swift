@@ -54,7 +54,7 @@ struct FlowWordmark: View {
     var color: Color = FlowColor.logoFill
 
     var body: some View {
-        Text("Free Flow")
+        Text("Flow")
             .font(FlowFont.sans(22, weight: 650))
             .tracking(-0.4)
             .foregroundStyle(color)

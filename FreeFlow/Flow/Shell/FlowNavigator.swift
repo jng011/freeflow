@@ -68,8 +68,25 @@ final class FlowNavigator: ObservableObject {
     private var isTraversingHistory = false
     private var cancellables = Set<AnyCancellable>()
 
+    /// Screenshot helper: `-FlowPage insights|voice|dictionary|files|settings-<pane>` opens
+    /// that page at launch.
+    private func applyLaunchPage() {
+        guard let page = UserDefaults.standard.string(forKey: "FlowPage") else { return }
+        switch page {
+        case "insights": destination = .insights
+        case "voice": destination = .insights; insightsTab = 1
+        case "dictionary": destination = .dictionary
+        case "files": destination = .files
+        default:
+            if page.hasPrefix("settings-") {
+                settingsPane = FlowSettingsPane(rawValue: String(page.dropFirst("settings-".count))) ?? .general
+            }
+        }
+    }
+
     private init() {
         isSidebarCollapsed = UserDefaults.standard.bool(forKey: Self.sidebarCollapsedKey)
+        applyLaunchPage()
 
         NotificationCenter.default.publisher(for: .navigateToDestination)
             .receive(on: DispatchQueue.main)

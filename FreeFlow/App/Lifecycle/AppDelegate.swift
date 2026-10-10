@@ -11,6 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         menuBarManager?.applyActivationPolicy()
         FlowSecureInputMonitor.shared.start()
+        Task { @MainActor in FlowPillDemo.start() }
         // Voice switches on: load the speaker model now so the first dictation never waits for it.
         if FlowVoiceSettings.anyEnabled { Task.detached(priority: .utility) { _ = await FlowVoiceModel.shared.load() } }
     }

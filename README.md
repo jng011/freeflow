@@ -5,7 +5,7 @@
 
 # Free Flow
 
-**Voice to text for your Mac.** Hold **fn**, talk, let go, and clean text appears wherever you're typing.
+**The Wispr Flow workflow, free and open source.** Hold **fn**, talk, let go, and clean text appears wherever you're typing.
 
 <a href="https://github.com/jng011/freeflow/releases/latest">
   <picture>
@@ -16,37 +16,75 @@
 
 macOS 26+ &nbsp;·&nbsp; Apple Silicon &nbsp;·&nbsp; Free and open source
 
-[Why](#why-free-flow) • [Features](#features) • [How it works](#how-it-works) • [Install](#installation) • [Shortcuts](#shortcuts) • [AI agents](#let-ai-agents-see-your-dictations) • [Build from source](#build-from-source)
+[Why](#why-free-flow) • [Features](#features) • [How it works](#how-it-works) • [Tour](#a-look-around) • [Install](#installation) • [Shortcuts](#shortcuts) • [AI agents](#let-ai-agents-see-your-dictations) • [Build from source](#build-from-source)
 
 </div>
 
-<!-- screenshot: Flow Bar while dictating -->
+<p align="center">
+  <img src="./docs/images/pill.gif" alt="The Flow Bar: dictating, hands-free, prompt mode and Ask Siri" width="480">
+</p>
 
-Free Flow turns your voice into polished text in any app. Speech is transcribed on your Mac with Whisper, Parakeet or Apple Speech, then optionally tidied up by AI so filler words, false starts and missing punctuation never reach the page. No account needed.
+Free Flow is a free, open-source take on Wispr Flow for the Mac. If you know Wispr Flow, you already know Free Flow: hold fn, talk, and polished text lands in whatever app you're using. Then it goes further, with transcription that can run entirely on your Mac, a prompt mode for AI assistants, voice filtering, and a door for your AI agents. No account, no subscription.
 
 > [!TIP]
 > Free Flow reads the **fn** key straight from the keyboard, so even quick double taps are caught reliably. Nothing to configure: just hold fn and talk.
 
 ## Why Free Flow
 
-- **Instant.** Hold a key and talk. No window to open, no button to click.
-- **Private.** Your speech is transcribed on your Mac.
-- **Agent-native.** A built-in MCP server lets AI agents work with your dictations.
-- **Open.** Free, GPL v3, written in Swift. No account.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Familiar by design
+Hold fn to talk, double tap for hands-free, say "scratch that" to take it back. If you've used Wispr Flow, your hands already know Free Flow.
+
+</td>
+<td width="50%" valign="top">
+
+### Yours, on your Mac
+Transcribe on-device with Whisper, Parakeet or Apple Speech. No account, no sign-in, and your history stays in a folder you own.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Built for agents
+A local MCP server lets Claude and other agents read your dictations, stats and dictionary, add words, and transcribe files.
+
+</td>
+<td width="50%" valign="top">
+
+### Free and open
+GPL v3, written in Swift, notarized by Apple, and updated automatically. Read every line, build it yourself, or just download it.
+
+</td>
+</tr>
+</table>
 
 ## Features
 
-- **Hold fn to talk.** Double tap fn for hands-free, tap again to stop.
-- **Cleans up as you go.** Filler words, false starts and punctuation are fixed before the text is pasted. Add an OpenRouter, Anthropic or OpenAI key in **Settings > AI Cleanup**, or use Apple Intelligence on-device where available.
+### Everything you'd expect
+
+- **Hold fn to talk.** Double tap fn for hands-free, tap again to stop. The key is read straight from the keyboard, so fast double taps are never missed.
+- **Cleans up as you go.** Filler words, false starts and punctuation are fixed before the text is pasted. Use an OpenRouter, Anthropic or OpenAI key in **Settings > AI Cleanup**, or Apple Intelligence on-device where available.
 - **"Scratch that."** Say it and the last thing you said is taken back.
-- **Prompt mode.** Hold **Ctrl** with **fn** and a rambling request comes out as a clear prompt for an AI assistant.
-- **Ask Siri.** Start with "Ask Siri" and your words go straight to Siri.
-- **Only your voice.** Free Flow can learn your voice and leave out other people talking nearby (**Settings > General > Voice**).
-- **Runs on your Mac.** Transcription uses Whisper, Parakeet or Apple Speech locally.
 - **Dictionary.** Teach it names and jargon once and it spells them your way.
-- **Files.** Drop in a voice memo, meeting or video (MP3, M4A, WAV, MP4, MOV and more) to get a clean transcript.
+- **Files.** Drop in a voice memo, meeting or video (MP3, M4A, WAV, MP4, MOV and more) for a clean transcript.
 - **Insights.** Words per minute, streaks, and where you dictate most.
-- **AI agent access.** A local MCP server lets agents like Claude read your history and stats, manage your dictionary and transcribe files.
+- **Light and dark mode.** Follow your Mac or pick one. Easy on the eyes at night.
+
+### What Free Flow adds
+
+- **On-device transcription.** Whisper, Parakeet or Apple Speech, running on your Mac.
+- **Prompt mode.** Hold **Ctrl** with **fn** and a rambling request comes out as a clear, structured prompt for an AI assistant.
+- **Ask Siri.** Start with "Ask Siri" and your words go straight to Siri.
+- **Only your voice.** Free Flow learns your voice and can leave out other people talking nearby (**Settings > General > Voice**).
+- **AI agent access.** A local MCP server for Claude and other agents.
+- **Open source.** Every line is here. Fork it, fix it, make it yours.
+
+> [!NOTE]
+> Free Flow is young and moving fast. It runs on macOS 26 with Apple Silicon. Found a bug or want a feature? [Open an issue](https://github.com/jng011/freeflow/issues).
 
 ## How it works
 
@@ -62,7 +100,60 @@ Free Flow turns your voice into polished text in any app. Speech is transcribed 
 3. **Cleanup runs.** Your dictionary spellings are applied and, if enabled, AI cleanup fixes fillers, false starts and punctuation.
 4. **Text appears** at your cursor, ready to send.
 
-<!-- screenshot: Home history feed -->
+
+## A look around
+
+<p align="center">
+  <img src="./docs/images/light-dark.gif" alt="Free Flow in light and dark mode" width="900">
+  <br><em>Light and dark, done properly. Follow your Mac or pick one; your eyes will thank you at 2 a.m.</em>
+</p>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Insights.** Words per minute, streaks, and where you dictate.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/images/insights-dark.png">
+  <img src="./docs/images/insights-light.png" alt="Insights: words per minute, streaks and app usage">
+</picture>
+
+</td>
+<td width="50%" valign="top">
+
+**Your voice.** A profile of how you talk, refreshed as you dictate.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/images/voice-dark.png">
+  <img src="./docs/images/voice-light.png" alt="Your voice profile">
+</picture>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Dictionary.** Names and jargon, spelled your way.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/images/dictionary-dark.png">
+  <img src="./docs/images/dictionary-light.png" alt="Dictionary of custom words">
+</picture>
+
+</td>
+<td width="50%" valign="top">
+
+**Files.** Drop in a recording, get a clean transcript.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/images/files-dark.png">
+  <img src="./docs/images/files-light.png" alt="Files: transcribe recordings and videos">
+</picture>
+
+</td>
+</tr>
+</table>
 
 ## Requirements
 
@@ -168,3 +259,7 @@ Free Flow stands on these open-source projects:
 - [Figtree](https://github.com/erikdkennedy/figtree) and [EB Garamond](https://github.com/octaviopardo/EBGaramond12), under the SIL Open Font License
 
 Portions of Free Flow are derived, with modifications, from VoiceInk (GPL v3).
+
+---
+
+Wispr Flow is a trademark of its owner. Free Flow is an independent, open-source project and is not affiliated with, sponsored by or endorsed by the makers of Wispr Flow. The name is used only to describe the workflow Free Flow follows.

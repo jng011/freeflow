@@ -32,6 +32,9 @@ final class FlowDictationState: ObservableObject {
         if modeBadge != badge { modeBadge = badge }
     }
 
+    /// Set by FlowPillDemo: a synthetic input level instead of the microphone.
+    var demoLevelDB: Float?
+
     /// The engine's recorder, used for the level meter.
     weak var recorder: Recorder?
 
@@ -52,6 +55,7 @@ final class FlowDictationState: ObservableObject {
 
     /// RMS dBFS of the latest meter snapshot; -160 when not recording.
     func currentInputLevelDB() -> Float {
+        if let demoLevelDB { return phase == .listening ? demoLevelDB : -160 }
         guard phase == .listening, let recorder else { return -160 }
         let meter = recorder.audioMeterSnapshot()
         return meter.averagePower <= 0 ? -160 : Float(-60 + 60 * meter.averagePower)
