@@ -37,5 +37,5 @@ cat > "$DIST/appcast.xml" <<XML
 </rss>
 XML
 gh release create "$TAG" "$ZIP" "$DMG" "$DIST/appcast.xml" \
-  --repo "$GH_REPO" --title "Free Flow $VERSION" --notes "$NOTES" --latest
+  --repo "$GH_REPO" --target main --title "Free Flow $VERSION" --notes "$NOTES" --latest
 echo "Published Free Flow $VERSION ($BUILD) -> https://github.com/$GH_REPO/releases/tag/$TAG"
