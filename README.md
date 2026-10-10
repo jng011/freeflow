@@ -1,33 +1,81 @@
+<!-- prettier-ignore -->
+<div align="center">
+
+<img src="./docs/images/icon.png" alt="Free Flow logo" width="128" />
+
 # Free Flow
 
-Voice to text for your Mac. Hold **fn**, talk, let go, and your words show up wherever you're typing.
+**Voice to text for your Mac.** Hold **fn**, talk, let go, and clean text appears wherever you're typing.
 
-[![Latest release](https://img.shields.io/github/v/release/jng011/freeflow)](https://github.com/jng011/freeflow/releases/latest)
-![macOS 26+](https://img.shields.io/badge/macOS-26%2B-blue)
-![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-only-lightgrey)
-[![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-green)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/jng011/freeflow?style=flat-square)](https://github.com/jng011/freeflow/releases/latest)
+![macOS 26+](https://img.shields.io/badge/macOS-26%2B-000000?style=flat-square&logo=apple&logoColor=white)
+![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-only-555555?style=flat-square)
+![Swift](https://img.shields.io/badge/Swift-SwiftUI-F05138?style=flat-square&logo=swift&logoColor=white)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-2ea44f?style=flat-square)](LICENSE)
+
+<br>
+
+[![Download Free Flow for macOS](https://img.shields.io/badge/Download%20for%20macOS-Free%20Flow-0A84FF?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/jng011/freeflow/releases/latest)
+
+[Why](#why-free-flow) • [Features](#features) • [How it works](#how-it-works) • [Install](#installation) • [Shortcuts](#shortcuts) • [AI agents](#let-ai-agents-see-your-dictations) • [Build from source](#build-from-source)
+
+</div>
+
+<!-- screenshot: Flow Bar while dictating -->
+
+Free Flow turns your voice into polished text in any app. Speech is transcribed on your Mac with Whisper, Parakeet or Apple Speech, then optionally tidied up by AI so filler words, false starts and missing punctuation never reach the page. No account needed.
+
+> [!TIP]
+> Free Flow reads the **fn** key straight from the keyboard, so even quick double taps are caught reliably. Nothing to configure: just hold fn and talk.
+
+## Why Free Flow
+
+- **Instant.** Hold a key and talk. No window to open, no button to click.
+- **Private.** Your speech is transcribed on your Mac.
+- **Agent-native.** A built-in MCP server lets AI agents work with your dictations.
+- **Open.** Free, GPL v3, written in Swift. No account.
 
 ## Features
 
-- **Hold fn to talk.** Double tap fn for hands-free, tap again to stop. The fn key is read straight from the keyboard, so fast double taps don't get missed.
-- **Cleans up as you go.** Filler words, false starts and punctuation are fixed before the text is pasted. Add an AI key in Settings > AI Cleanup, or use Apple Intelligence where available.
+- **Hold fn to talk.** Double tap fn for hands-free, tap again to stop.
+- **Cleans up as you go.** Filler words, false starts and punctuation are fixed before the text is pasted. Add an OpenRouter, Anthropic or OpenAI key in **Settings > AI Cleanup**, or use Apple Intelligence on-device where available.
 - **"Scratch that."** Say it and the last thing you said is taken back.
-- **Prompt mode.** Hold Ctrl with fn and a rambling request comes out as a clear prompt for an AI assistant.
+- **Prompt mode.** Hold **Ctrl** with **fn** and a rambling request comes out as a clear prompt for an AI assistant.
 - **Ask Siri.** Start with "Ask Siri" and your words go straight to Siri.
-- **Only your voice.** Free Flow can learn your voice and leave out other people talking nearby.
-- **Runs on your Mac.** Whisper, Parakeet or Apple Speech. No account needed.
+- **Only your voice.** Free Flow can learn your voice and leave out other people talking nearby (**Settings > General > Voice**).
+- **Runs on your Mac.** Transcription uses Whisper, Parakeet or Apple Speech locally.
 - **Dictionary.** Teach it names and jargon once and it spells them your way.
-- **Files.** Drop in a voice memo, meeting or video to get a clean transcript.
+- **Files.** Drop in a voice memo, meeting or video (MP3, M4A, WAV, MP4, MOV and more) to get a clean transcript.
 - **Insights.** Words per minute, streaks, and where you dictate most.
+- **AI agent access.** A local MCP server lets agents like Claude read your history and stats, manage your dictionary and transcribe files.
+
+## How it works
+
+```mermaid
+flowchart LR
+    A["Hold fn"] --> B["Speak"]
+    B --> C["Release fn"]
+    C --> D["On-device transcription<br/>Whisper · Parakeet · Apple Speech"]
+    D --> E["Dictionary + AI cleanup<br/>(optional)"]
+    E --> F["Clean text pasted<br/>where you're typing"]
+```
+
+1. **Hold fn** in any app and start talking. The Flow Bar shows that Free Flow is listening.
+2. **Let go.** Your audio is transcribed on your Mac.
+3. **Cleanup runs.** Your dictionary spellings are applied and, if enabled, AI cleanup fixes fillers, false starts and punctuation.
+4. **Text appears** at your cursor, ready to send.
+
+<!-- screenshot: Home history feed -->
 
 ## Requirements
 
-- macOS 26 or later
-- Apple Silicon (M1 or newer). Intel Macs aren't supported.
+| | |
+|---|---|
+| **macOS** | 26 or later |
+| **Chip** | Apple Silicon (M1 or newer). Intel Macs aren't supported. |
+| **Permissions** | Microphone, Accessibility, Input Monitoring |
 
 ## Installation
-
-### Download
 
 1. Download **`Free-Flow-<version>.dmg`** from the [latest release](https://github.com/jng011/freeflow/releases/latest).
 2. Open it and drag **Free Flow** to **Applications**.
@@ -36,21 +84,42 @@ Voice to text for your Mac. Hold **fn**, talk, let go, and your words show up wh
    - **Accessibility:** to paste into the app you're using.
    - **Input Monitoring:** to read the fn key directly from the keyboard.
 
-The app is signed and notarized by Apple, so it opens without security warnings.
+> [!NOTE]
+> The app is signed and notarized by Apple, so it opens without security warnings.
 
 ### Updates
 
-Free Flow checks for updates on its own and installs them from this repository's releases.
+Free Flow updates itself with [Sparkle](https://sparkle-project.org), installing new versions from this repository's [releases](https://github.com/jng011/freeflow/releases).
+
+## Shortcuts
+
+| Action | Shortcut |
+|---|---|
+| Dictate | Hold **fn**, release to finish |
+| Hands-free | Double tap **fn**, tap again to stop |
+| Prompt mode | Hold **Ctrl** + **fn** |
+| Take back the last thing you said | Say "scratch that" |
+| Send to Siri | Start with "Ask Siri" |
 
 ## Let AI agents see your dictations
 
-Free Flow includes a local MCP server, so agents like Claude can read your dictation history, stats and dictionary, add words, and transcribe files through the app. It runs on your Mac; nothing is sent anywhere unless the agent sends it. Open Free Flow once, then:
+Free Flow includes a local MCP server, so agents like Claude can:
+
+- Read and search your dictation history
+- See your stats
+- Read your dictionary and add words
+- Transcribe audio files through the app
+
+Open Free Flow once, then run:
 
 ```sh
 claude mcp add free-flow -- python3 "$HOME/Library/Application Support/com.jaydenghiyam.FreeFlow/freeflow_mcp.py"
 ```
 
-The same command is in onboarding and in Settings > Data and Privacy.
+> [!IMPORTANT]
+> The server runs on your Mac. Nothing leaves it unless the agent sends it.
+
+The same command is shown during onboarding and in **Settings > Data and Privacy**.
 
 ## Build from source
 
@@ -76,9 +145,10 @@ mkdir -p Vendor && cp -R /tmp/whisper.cpp/build-apple/whisper.xcframework Vendor
 open FreeFlow.xcodeproj
 ```
 
-In Xcode, choose your own team under **Signing & Capabilities**, then press **Run** (⌘R).
+In Xcode, choose your own team under **Signing & Capabilities**, then press **Run** (Cmd+R).
 
-To build a signed Release copy from the command line instead, see [BUILDING.md](BUILDING.md).
+> [!TIP]
+> To build a signed Release copy or a notarized DMG from the command line, see [BUILDING.md](BUILDING.md). Swift packages built from source live in `Packages/`.
 
 ## Acknowledgments
 
@@ -100,10 +170,4 @@ Free Flow stands on these open-source projects:
 **Fonts**
 - [Figtree](https://github.com/erikdkennedy/figtree) and [EB Garamond](https://github.com/octaviopardo/EBGaramond12), under the SIL Open Font License
 
-## License
-
-Free Flow is released under the [GNU General Public License v3.0](LICENSE).
-
----
-
-<sub>Portions of this app are derived, with modifications, from VoiceInk (GPL v3).</sub>
+Portions of Free Flow are derived, with modifications, from VoiceInk (GPL v3).
