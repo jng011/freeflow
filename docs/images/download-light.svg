@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="248" height="56" viewBox="0 0 248 56">
-  <rect width="248" height="56" rx="28" fill="#1A1A1A"/>
-  <g fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(30 16)">
-    <path d="M12 2v14"/><path d="M6.5 10.5 12 16l5.5-5.5"/><path d="M3 18.5v1.5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="38" viewBox="0 0 176 38">
+  <rect width="176" height="38" rx="19" fill="#1A1A1A"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(19 10.5)">
+    <path d="M8.5 1.5v10"/><path d="M4.5 7.8 8.5 11.8l4-4"/><path d="M2 13.5v1a1.5 1.5 0 0 0 1.5 1.5h10a1.5 1.5 0 0 0 1.5-1.5v-1"/>
   </g>
-  <text x="66" y="35" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#FFFFFF" letter-spacing="-0.2">Download for Mac</text>
+  <text x="45" y="24.2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Download for Mac</text>
 </svg>

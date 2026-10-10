@@ -10,7 +10,7 @@
 <a href="https://github.com/jng011/freeflow/releases/latest">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./docs/images/download-dark.svg">
-    <img src="./docs/images/download-light.svg" alt="Download Free Flow for Mac" height="56">
+    <img src="./docs/images/download-light.svg" alt="Download Free Flow for Mac" height="38">
   </picture>
 </a>
 
@@ -21,7 +21,7 @@ macOS 26+ &nbsp;·&nbsp; Apple Silicon &nbsp;·&nbsp; Free and open source
 </div>
 
 <p align="center">
-  <img src="./docs/images/pill.gif" alt="The Flow Bar: dictating, hands-free, prompt mode and Ask Siri" width="480">
+  <img src="./docs/images/pill.png" alt="The Flow Bar: dictating, hands-free, prompt mode and Ask Siri" width="320">
 </p>
 
 Free Flow is a free, open-source take on Wispr Flow for the Mac. If you know Wispr Flow, you already know Free Flow: hold fn, talk, and polished text lands in whatever app you're using. Then it goes further, with transcription that can run entirely on your Mac, a prompt mode for AI assistants, voice filtering, and a door for your AI agents. No account, no subscription.
